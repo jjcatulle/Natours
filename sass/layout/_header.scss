@@ -1,0 +1,39 @@
+/*styling the header in the main page*/
+.header {
+    /* should always be 95% of the window,green is added to gradient/use the slighter to change visibility of color */
+    height: 95vh;
+        background-image: linear-gradient(to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)),
+        url(../img/hero.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: top;
+    /* add the cut wedge the bottom right  */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &__logo-box {
+        /* setting it from the top left corner */
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        /* setting the size of the logo image; */
+        height: 3.5rem;
+    }
+
+    /* the slogan of the company, dispay:block put each on a new line*/
+    &__text-box {
+        /* centering the element */
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        /* shift to the middle of the element */
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+

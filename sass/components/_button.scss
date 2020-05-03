@@ -4,7 +4,7 @@
 
 this is for all btn
 :tells what happen after an event
-*/
+*/  &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -17,6 +17,9 @@ this is for all btn
         transition: all .2s;
         position: relative;
         font-size: $default-font-size;
+
+        border:none;
+        cursor: pointer;
     }
 
     /* transform tells what effect */
@@ -32,7 +35,9 @@ this is for all btn
     }
 
     /* what happens when the .btn is click */
-    &:active {
+    &:active,
+    &focus{
+        outline: none;
         transform: translateY(-.2rem);
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     }
